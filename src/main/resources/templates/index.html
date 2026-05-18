@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Acervo Literário - TBD</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="/">📚 Acervo Literário</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacao">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuNavegacao">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active fw-semibold" href="/">Página Inicial</a></li>
+                <li class="nav-item"><a class="nav-link" href="/jdbc/livros">Via JDBC</a></li>
+                <li class="nav-item"><a class="nav-link" href="/jpa/livros">Via JPA</a></li>
+                <li class="nav-item"><a class="nav-link" href="/jpa/livros/buscar">Pesquisa</a></li>
+                <li class="nav-item"><a class="nav-link" href="/cache/livros">Uso de Cache</a></li>
+                <li class="nav-item"><a class="nav-link" href="/desempenho">Relatório</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <div class="p-5 mb-4 bg-white rounded-3 shadow-sm border">
+        <div class="container-fluid py-2">
+            <h1 class="display-5 fw-bold text-dark">Gestão de Biblioteca</h1>
+            <p class="col-md-8 fs-5 text-secondary">Plataforma de testes para avaliar diferentes estratégias de persistência e acesso a dados no desenvolvimento web.</p>
+            <hr class="my-3">
+            <p class="text-muted fw-light">Projeto Prático - Disciplina TBD (IFRS)</p>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-5">
+        
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                    <span class="badge bg-info text-dark mb-2">Parte 1</span>
+                    <h5 class="card-title">Integração JDBC</h5>
+                    <p class="card-text text-muted">Acesso direto ao banco de dados utilizando consultas SQL puras.</p>
+                    <a href="/jdbc/livros" class="btn btn-outline-primary w-100 mt-2">Acessar Módulo</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                    <span class="badge bg-success mb-2">Parte 2</span>
+                    <h5 class="card-title">ORM com JPA</h5>
+                    <p class="card-text text-muted">Mapeamento objeto-relacional estruturado com Hibernate.</p>
+                    <a href="/jpa/livros" class="btn btn-outline-success w-100 mt-2">Acessar Módulo</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                    <span class="badge bg-warning text-dark mb-2">Filtro JPA</span>
+                    <h5 class="card-title">Pesquisa Específica</h5>
+                    <p class="card-text text-muted">Busca segmentada de livros utilizando o nome do autor.</p>
+                    <a href="/jpa/livros/buscar" class="btn btn-outline-warning w-100 mt-2">Acessar Módulo</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                    <span class="badge bg-danger mb-2">Parte 3</span>
+                    <h5 class="card-title">Redis Cache</h5>
+                    <p class="card-text text-muted">Aceleração de leitura armazenando dados frequentes em memória.</p>
+                    <a href="/cache/livros" class="btn btn-outline-danger w-100 mt-2">Acessar Módulo</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6">
+            <div class="card h-100 border-0 shadow-sm bg-primary text-white">
+                <div class="card-body">
+                    <span class="badge bg-light text-primary mb-2">Parte 4</span>
+                    <h5 class="card-title text-white">Análise de Desempenho</h5>
+                    <p class="card-text text-white-50">Comparativo de tempo de resposta entre as diferentes abordagens do sistema.</p>
+                    <a href="/desempenho" class="btn btn-light text-primary w-100 mt-2 fw-bold">Ver Relatório Completo</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

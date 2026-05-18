@@ -1,0 +1,66 @@
+/* Importação de fonte moderna do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Aplicando a fonte no corpo do documento */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f8f9fa; /* Fundo cinza bem claro para contrastar com os cards brancos */
+}
+
+/* Ajustes finos na barra de navegação */
+.navbar-brand {
+    letter-spacing: -0.5px;
+}
+
+.nav-link {
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #0d6efd !important;
+}
+
+/* Efeito de elevação suave nos cartões (Cards) */
+.card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-radius: 12px; /* Bordas um pouco mais arredondadas */
+}
+
+a.btn {
+    transition: all 0.2s;
+}
+
+/* O hover só é aplicado aos cards da página inicial (que não têm a classe .p-0) */
+.card:not(.mb-5):hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
+}
+
+/* Efeito nas linhas da tabela */
+.table-hover tbody tr {
+    transition: background-color 0.15s ease-in-out;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f1f3f5;
+}
+
+/* Customização da barra de rolagem (Scrollbar) para as tabelas grandes */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1; 
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8; 
+}
